@@ -41,5 +41,22 @@ public class Encrypt {
         }
         return Word.NULL_SYMBOL;
 	}
+
+	public char decryptChar(char toDecrypt) {
+		// TODO Auto-generated method stub
+		char[] elem = key.getChangeSymbol();
+        if (elem == null) {
+            return Word.NULL_SYMBOL;
+        }
+        for (int i = 0; i < elem.length; i++) {
+            if (i > key.getElements().length - 1) {
+                return Word.NULL_SYMBOL;
+            }
+            if (elem[i] == toDecrypt) {
+                return key.getElements()[i];
+            }
+        }
+        return Word.NULL_SYMBOL;
+	}
 	
 }
