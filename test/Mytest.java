@@ -1,5 +1,6 @@
 package test;
 
+import prog.Comparer;
 import prog.Encrypt;
 import prog.Word;
 
@@ -83,7 +84,7 @@ public class Mytest {
 	
 	@Test
     public void getSetSymbolsChangeTest2() {
-        Word wor = new Word();
+		Word wor = new Word();
         char[] elements = {
         	'x', 'y', 'z', 'a', 'b', 'd', 'f', 'g'
         };
@@ -91,5 +92,11 @@ public class Mytest {
         char[] expected = {'x', 'y', 'z', 'a', 'b', 'd', 'f', 'g'};
         char[] resault = wor.getChangeSymbol();
         assertArrayEquals(expected, resault);
+    }
+	
+	@Test
+    public void classComparerTest() {
+        Comparer comp = new Comparer();
+        assertNotNull(comp);
     }
 }
