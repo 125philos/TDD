@@ -250,7 +250,7 @@ public class Mytest {
         };
         Word wor = new Word(elem1, elem2);
         encr.setWord(wor);
-        String expected = "010203";
+        String expected = "020103";
         String resault = encr.encrypt(string);
         assertEquals(expected, resault);
     }

@@ -79,4 +79,30 @@ public class Encrypt {
         }
         return builder.toString();
     }
+	
+	/*
+     * Метод, который расшифровывает заданную строку, используя ключ, установленный для 
+     * объекта класса Encrypt.
+     * @param toDecrypt - строка, которую требуется расшифровать, тип String,
+     * @return - результат расшифровки, если удалось расшифровать, тип String. 
+     * Возвращает нулевое значение, если строка toDecrypt пустая или является нулевой.
+     * */
+    public String decrypt(String toDecrypt) {
+        if (toDecrypt == null || toDecrypt.equals("")) {
+            return null;
+        }
+        StringBuilder builder = new StringBuilder();
+        if (key.getChangeSymbol() == null) {
+            int shear = key.getShearing();
+            for (int i = 0; i < toDecrypt.length(); i++) {
+                builder.append((char) (Word.DEFAULT_SYMBOL.get(toDecrypt.charAt(i)) - shear));
+            }
+        } else {
+            for (int i = 0; i < toDecrypt.length(); i++) {
+                char symb = toDecrypt.charAt(i);
+                builder.append(decryptChar(symb));
+            }
+        }
+        return builder.toString();
+    }
 }
