@@ -26,4 +26,13 @@ public class Mytest {
         Word wor = new Word();
         assertNotNull(wor);
     }
+	
+	@Test
+    public void getSetOnlySymbolTest() {
+        Word wor = new Word();
+        wor.setElementToEncrypt('q');
+        char expected = 'q';
+        char result = wor.getElementToEncrypt();
+        assertEquals(expected, result);
+    }
 }
