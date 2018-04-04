@@ -139,4 +139,16 @@ public class Mytest {
         assertEquals(expected, resault);
     }
 	
+	@Test
+    public void equalsWordTest() {
+        Word wor1 = new Word();
+        char[] elem1 = {'a', 'b'};
+        char[] elem2 = {'b', 'a'};
+        wor1.setElements(elem1);
+        Word wor2 = new Word();
+        wor2.setElements(elem2);
+        boolean expected = false;
+        boolean resault = wor1.equals(wor2);
+        assertEquals(expected, resault);
+    }
 }
