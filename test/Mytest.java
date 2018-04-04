@@ -18,4 +18,10 @@ public class Mytest {
         Encrypt enct = new Encrypt();
         assertNotNull(enct);
     }
+	
+	@Test
+    public void classWordTest() {
+        Word wor = new Word();
+        assertNotNull(wor);
+    }
 }
