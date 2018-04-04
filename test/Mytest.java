@@ -274,4 +274,10 @@ public class Mytest {
         String resault = encr.decrypt(encryptedString);
         assertEquals(expected, resault);
     }
+	
+	@Test
+    public void classFileWriteReadTest() {
+		FileWriteRead writeRead = new FileWriteRead();
+        assertNotNull(writeRead);
+    }
 }
