@@ -1,6 +1,8 @@
 package test;
 
 import prog.Encrypt;
+import prog.Word;
+
 import java.io.File;
 import java.io.IOException;
 import org.junit.After;
