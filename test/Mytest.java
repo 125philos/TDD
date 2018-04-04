@@ -125,4 +125,18 @@ public class Mytest {
         boolean resault = Comparer.compareSymbolArrays(elemFirst, elemSecond);
         assertEquals(expected, resault);
     }
+	
+	@Test
+    public void lengthTwoArrayTest() {
+        char[] elemFirst = {
+            'a', 'b', 'c', 'd', 'x', 'y', 'z', 'i', 'e', 'q', 'f', 'g'
+        };
+        char[] elemSecond = {
+            'a', 'b', 'c', 'f', 'g'
+        };
+        boolean expected = false;
+        boolean resault = Comparer.compareSymbolArrays(elemFirst, elemSecond);
+        assertEquals(expected, resault);
+    }
+	
 }
