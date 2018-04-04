@@ -35,4 +35,14 @@ public class Mytest {
         char resault = wor.getElementToEncrypt();
         assertEquals(expected, resault);
     }
+	
+	@Test
+    public void getSetOnlySymbolTest2() {
+        Word wor = new Word();
+        wor.setElementToEncrypt('v');
+        char expected = 'v';
+        char resault = wor.getElementToEncrypt();
+        assertEquals(expected, resault);
+    }
+	
 }
