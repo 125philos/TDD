@@ -1,4 +1,4 @@
-package prog;
+п»їpackage prog;
 
 public class Comparer {
 
@@ -6,10 +6,10 @@ public class Comparer {
 	
 	// compare two array
 	/*
-	 * Метод, который направлен на проверяем конгруэнтность массивов.  
-	 * @param arr1 - массив с первым комплектом символов, типа char, 
-	 * @param arr2 - массив со вторым комплектом символов, типа char.
-	 * @return arrayCongruence - результат сравнения двух массивов, тип boolean.
+	 * РњРµС‚РѕРґ, РєРѕС‚РѕСЂС‹Р№ РЅР°РїСЂР°РІР»РµРЅ РЅР° РїСЂРѕРІРµСЂСЏРµРј РєРѕРЅРіСЂСѓСЌРЅС‚РЅРѕСЃС‚СЊ РјР°СЃСЃРёРІРѕРІ.  
+	 * @param arr1 - РјР°СЃСЃРёРІ СЃ РїРµСЂРІС‹Рј РєРѕРјРїР»РµРєС‚РѕРј СЃРёРјРІРѕР»РѕРІ, С‚РёРїР° char, 
+	 * @param arr2 - РјР°СЃСЃРёРІ СЃРѕ РІС‚РѕСЂС‹Рј РєРѕРјРїР»РµРєС‚РѕРј СЃРёРјРІРѕР»РѕРІ, С‚РёРїР° char.
+	 * @return arrayCongruence - СЂРµР·СѓР»СЊС‚Р°С‚ СЃСЂР°РІРЅРµРЅРёСЏ РґРІСѓС… РјР°СЃСЃРёРІРѕРІ, С‚РёРї boolean.
 	 * */
 	public static boolean compareSymbolArrays(char[] arr1, char[] arr2) {
 		arrayCongruence = true;
