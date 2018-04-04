@@ -177,11 +177,27 @@ public class Mytest {
 		Word wor1 = new Word();
 		Word wor2 = new Word();
         char[] elem = {'a', 'b'};
-        wor2.setChangeSymbol(elem);
+        wor2.setElements(elem);
         boolean expected = false;
         boolean resault = Integer.compare(wor1.hashCode(), wor2.hashCode()) == 0;
         assertEquals(expected, resault);
     }
 	
+	@Test
+    public void getSetKeyEncryptorTest() {
+        Encrypt encr = new Encrypt();
+        Word expected = new Word();
+        char[] elemFirst = {
+            'a', 'b', 'c'
+        };
+        char[] elemSecond = {
+            'z', 'v', 'g'
+        };
+        expected.setElements(elemFirst);
+        expected.setChangeSymbol(elemSecond);
+        encr.setWord(expected);
+        Word resault = encr.getWord();
+        assertEquals(expected, resault);
+    }
 	
 }
