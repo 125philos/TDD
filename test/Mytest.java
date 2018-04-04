@@ -151,4 +151,15 @@ public class Mytest {
         boolean resault = wor1.equals(wor2);
         assertEquals(expected, resault);
     }
+	
+	@Test
+    public void equalsWordTest2() {
+        Word wor1 = new Word();
+        wor1.setElements(null);
+        wor1.setChangeSymbol(null);
+        Word wor2 = null;
+        boolean expected = false;
+        boolean resault = wor1.equals(wor2);
+        assertEquals(expected, resault);
+    }
 }
