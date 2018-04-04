@@ -12,11 +12,17 @@ public class Comparer {
 	 * @return arrayCongruence - результат сравнения двух массивов, тип boolean.
 	 * */
 	public static boolean compareSymbolArrays(char[] arr1, char[] arr2) {
+		
+		// todo implement the compareSymbolArrays method later to the end
 		arrayCongruence = true;
-        for (int i = 0; i < arr1.length; i++) {
-            if (arr1[i] != arr2[i]) {
-				arrayCongruence = false;
-            }
+		if (arr1.length != arr2.length) {
+        	arrayCongruence = false;
+        } else {
+        	for (int i = 0; i < arr1.length; i++) {
+        		if (arr1[i] != arr2[i]) {
+        			arrayCongruence = false;
+        		}
+        	}
         }
         return arrayCongruence;
     }
