@@ -35,4 +35,26 @@ public class Word {
     public char[] getChangeSymbol() {
         return changeElem;
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        Word wor = (Word) obj;
+        if (elementToEncrypt != wor.elementToEncrypt) {
+            return false;
+        }
+        if (elements == wor.elements && changeElem == wor.changeElem) {
+            return true;
+        }
+        return Comparer.compareSymbolArrays(elements, wor.elements)
+                && Comparer.compareSymbolArrays(changeElem, wor.changeElem);
+    }
 }
