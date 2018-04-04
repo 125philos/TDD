@@ -225,4 +225,16 @@ public class Mytest {
         char resault = encr.decryptChar(encrypted);
         assertEquals(expected, resault);
     }
+	
+	@Test
+    public void encryptOneSymbolTest2() {
+        Encrypt encr = new Encrypt();
+        char[] elem = {'a', 'b', 'c'};
+        char[] changeElem = {'z', 'x', 'y'};
+        encr.setWord(new Word(elem, changeElem));
+        char toEncrypt = 'c';
+        char expected = 'y';
+        char resault = encr.encryptChar(toEncrypt);
+        assertEquals(expected, resault);
+    }
 }
