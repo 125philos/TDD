@@ -237,4 +237,21 @@ public class Mytest {
         char resault = encr.encryptChar(toEncrypt);
         assertEquals(expected, resault);
     }
+	
+	@Test
+    public void encryptStringTest() {
+        String string = "alabay";
+        Encrypt encr = new Encrypt();
+        char[] elem1 = {
+            'a', 'b', 'l', 'y'
+        };
+        char[] elem2 = {
+            '0', '1', '2', '3'
+        };
+        Word wor = new Word(elem1, elem2);
+        encr.setWord(wor);
+        String expected = "010203";
+        String resault = encr.encrypt(string);
+        assertEquals(expected, resault);
+    }
 }
