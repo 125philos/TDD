@@ -2,6 +2,7 @@ package test;
 
 import prog.Comparer;
 import prog.Encrypt;
+import prog.FileWriteRead;
 import prog.Word;
 
 import java.io.File;
@@ -279,5 +280,13 @@ public class Mytest {
     public void classFileWriteReadTest() {
 		FileWriteRead writeRead = new FileWriteRead();
         assertNotNull(writeRead);
+    }
+	
+	@Test
+    public void writeReadFileString() throws IOException {
+        String expected = "If you can keep your head when all about you";
+        FileWriteRead.writeStringFile(expected, "C:\\WriteFile");
+        String resault = FileWriteRead.readStringFile("C:\\WriteFile");
+        assertEquals(expected, resault);
     }
 }
