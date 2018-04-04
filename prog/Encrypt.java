@@ -1,5 +1,7 @@
 ﻿package prog;
 
+import java.io.IOException;
+
 public class Encrypt {
 
 	private Word key;
@@ -16,7 +18,7 @@ public class Encrypt {
     public void setWord(Word key) {
         this.key = key;
     }
-
+  
     /*
      * Метод, направленный на замену символ из базового алфавита на символ из алфавита замены,
      * который находитс¤ в соответствующей позиции. 
