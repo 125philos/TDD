@@ -59,4 +59,24 @@ public class Encrypt {
         return Word.NULL_SYMBOL;
 	}
 	
+	/*
+     * Зашифровывать заданную строку, используя ключ, установленный для объекта класса Encrypt.
+     * @param toEncrypt - строка, которую требуется зашифровать, тип String,
+     * @return builder.toString() - результат зашифрованной строки, если удалось зашифровать, тип String.
+     * */
+	public String encrypt(String toEncrypt) {
+        StringBuilder builder = new StringBuilder();
+        if (key.getElements() == null) {
+            int shear = key.getShearing();
+            for (int i = 0; i < toEncrypt.length(); i++) {
+                builder.append((char) (shear + Word.DEFAULT_SYMBOL.get(toEncrypt.charAt(i))));
+            }
+        } else {
+            for (int i = 0; i < toEncrypt.length(); i++) {
+                char symb = toEncrypt.charAt(i);
+                builder.append(encryptChar(symb));
+            }
+        }
+        return builder.toString();
+    }
 }

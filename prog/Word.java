@@ -1,6 +1,8 @@
 package prog;
 
 import java.util.Arrays;
+import java.util.Map;
+import java.util.TreeMap;
 
 
 public class Word {
@@ -9,6 +11,8 @@ public class Word {
 	private char elementToEncrypt; // encryption element
 	private char[] elements; // more symbols
 	private char[] changeElem; // change elements
+	private int shearing; // shift
+	public static final Map<Character, Integer> DEFAULT_SYMBOL;
 	
 	// constructor
 	public Word() {
@@ -19,6 +23,26 @@ public class Word {
 		setElements(elements);
         setChangeSymbol(changeElem);
         elementToEncrypt = NULL_SYMBOL;
+    }
+	
+	static {
+		DEFAULT_SYMBOL = new TreeMap<>();
+        for (int i = 0; i < 65536; i++) {
+        	DEFAULT_SYMBOL.put((char) i, i);
+        }
+    }
+
+    public Word(int shear) {
+        this.elementToEncrypt = NULL_SYMBOL;
+        this.shearing = shear;
+    }
+
+    public void setShearing(int shear) {
+        this.shearing = shear;
+    }
+
+    public int getShearing() {
+        return shearing;
     }
 	
 	public void setElementToEncrypt(char symbol) {
