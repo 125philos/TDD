@@ -162,4 +162,13 @@ public class Mytest {
         boolean resault = wor1.equals(wor2);
         assertEquals(expected, resault);
     }
+	
+	@Test
+    public void hashCodeTest() {
+		Word wor1 = new Word();
+		Word wor2 = new Word();
+        int expected = wor1.hashCode();
+        int resault = wor2.hashCode();
+        assertEquals(expected, resault);
+    }
 }
