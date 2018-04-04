@@ -15,6 +15,12 @@ public class Word {
         this.elementToEncrypt = NULL_SYMBOL;
     }
 	
+	public Word(char[] elements, char[] changeElem) {
+		setElements(elements);
+        setChangeSymbol(changeElem);
+        elementToEncrypt = NULL_SYMBOL;
+    }
+	
 	public void setElementToEncrypt(char symbol) {
         elementToEncrypt = symbol;
     }
