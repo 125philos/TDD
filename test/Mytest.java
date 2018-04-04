@@ -81,4 +81,15 @@ public class Mytest {
         assertArrayEquals(expected, resault);
     }
 	
+	@Test
+    public void getSetSymbolsChangeTest2() {
+        Word wor = new Word();
+        char[] elements = {
+        	'x', 'y', 'z', 'a', 'b', 'd', 'f', 'g'
+        };
+        wor.setChangeSymbol(elements);
+        char[] expected = {'x', 'y', 'z', 'a', 'b', 'd', 'f', 'g'};
+        char[] resault = wor.getChangeSymbol();
+        assertArrayEquals(expected, resault);
+    }
 }
