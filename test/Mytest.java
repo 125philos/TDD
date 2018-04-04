@@ -99,4 +99,17 @@ public class Mytest {
         Comparer comp = new Comparer();
         assertNotNull(comp);
     }
+	
+	@Test
+    public void congruenceTwoArrayTest() {
+        char[] elemFirst = {
+            'a', 'b', 'c'
+        };
+        char[] elemSecond = {
+            'x', 'y', 'z'
+        };
+        boolean expected = false;
+        boolean resault = Comparer.compareSymbolArrays(elemFirst, elemSecond);
+        assertEquals(expected, resault);
+    }
 }
