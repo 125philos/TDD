@@ -10,4 +10,11 @@ public class Word {
         this.elementToEncrypt = NULL_SYMBOL;
     }
 	
+	public void setElementToEncrypt(char symbol) {
+        elementToEncrypt = symbol;
+    }
+
+    public char getElementToEncrypt() {
+        return elementToEncrypt;
+    }
 }

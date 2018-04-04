@@ -32,7 +32,7 @@ public class Mytest {
         Word wor = new Word();
         wor.setElementToEncrypt('q');
         char expected = 'q';
-        char result = wor.getElementToEncrypt();
-        assertEquals(expected, result);
+        char resault = wor.getElementToEncrypt();
+        assertEquals(expected, resault);
     }
 }
