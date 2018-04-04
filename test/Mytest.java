@@ -112,4 +112,17 @@ public class Mytest {
         boolean resault = Comparer.compareSymbolArrays(elemFirst, elemSecond);
         assertEquals(expected, resault);
     }
+	
+	@Test
+    public void congruenceTwoArrayTest2() {
+        char[] elemFirst = {
+            'x', 'y', 'z'
+        };
+        char[] elemSecond = {
+            'x', 'y', 'z'
+        };
+        boolean expected = true;
+        boolean resault = Comparer.compareSymbolArrays(elemFirst, elemSecond);
+        assertEquals(expected, resault);
+    }
 }
