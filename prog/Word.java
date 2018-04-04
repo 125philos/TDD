@@ -5,6 +5,7 @@ public class Word {
 	public static final char NULL_SYMBOL = '\u0000'; // null symbol
 	private char elementToEncrypt; // encryption element
 	private char[] elements; // more symbols
+	private char[] changeElem; // change elements
 	
 	// constructor
 	public Word() {
@@ -25,5 +26,13 @@ public class Word {
 
     public char[] getElements() {
         return elements;
+    }
+    
+    public void setChangeSymbol(char[] changeEl) {
+        this.changeElem = changeEl;
+    }
+
+    public char[] getChangeSymbol() {
+        return changeElem;
     }
 }
