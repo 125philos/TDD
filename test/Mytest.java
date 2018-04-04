@@ -254,4 +254,14 @@ public class Mytest {
         String resault = encr.encrypt(string);
         assertEquals(expected, resault);
     }
+	
+	@Test
+    public void encryptAndDecryptStringTest() {
+        String expected = "If you can dream";
+        Encrypt encr = new Encrypt();
+        encr.setWord(new Word(200));
+        String encryptedString = encr.encrypt(expected);
+        String resault = encr.decrypt(encryptedString);
+        assertEquals(expected, resault);
+    }
 }
