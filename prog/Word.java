@@ -2,6 +2,7 @@ package prog;
 
 import java.util.Arrays;
 
+
 public class Word {
 
 	public static final char NULL_SYMBOL = '\u0000'; // null symbol
