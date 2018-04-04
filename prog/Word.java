@@ -1,5 +1,7 @@
 package prog;
 
+import java.util.Arrays;
+
 public class Word {
 
 	public static final char NULL_SYMBOL = '\u0000'; // null symbol
@@ -56,5 +58,14 @@ public class Word {
         }
         return Comparer.compareSymbolArrays(elements, wor.elements)
                 && Comparer.compareSymbolArrays(changeElem, wor.changeElem);
+    }
+    
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 59 * hash + this.elementToEncrypt;
+        hash = 59 * hash + Arrays.hashCode(this.elements);
+        hash = 59 * hash + Arrays.hashCode(this.changeElem);
+        return hash;
     }
 }
