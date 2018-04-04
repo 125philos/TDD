@@ -171,4 +171,17 @@ public class Mytest {
         int resault = wor2.hashCode();
         assertEquals(expected, resault);
     }
+	
+	@Test
+    public void hashCodeTest2() {
+		Word wor1 = new Word();
+		Word wor2 = new Word();
+        char[] elem = {'a', 'b'};
+        wor2.setChangeSymbol(elem);
+        boolean expected = false;
+        boolean resault = Integer.compare(wor1.hashCode(), wor2.hashCode()) == 0;
+        assertEquals(expected, resault);
+    }
+	
+	
 }
