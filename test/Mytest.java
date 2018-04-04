@@ -57,4 +57,15 @@ public class Mytest {
         assertArrayEquals(expected, resault);
     }
 	
+	@Test
+    public void getSetSymbolsTest2() {
+        Word wor = new Word();
+        char[] elements = {
+            'q', 'v', 'c', 'a', 'b', 'd', 'f', 'g'
+        };
+        wor.setElements(elements);
+        char[] expected = {'q', 'v', 'c', 'a', 'b', 'd', 'f', 'g'};
+        char[] resault = wor.getElements();
+        assertArrayEquals(expected, resault);
+    }
 }
